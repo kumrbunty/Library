@@ -1,0 +1,170 @@
+*{
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 10px;
+}
+@media only screen and (max-width:620px) 
+{
+  /* For mobile phones: */
+  .menu, .main, .right 
+  {
+    width:100%;
+  }
+}
+.abouts{
+  background-color: #474e5d;
+
+  text-align: right;
+  padding: 5px;
+  margin-top: 7px;
+  border-radius: 0px 20px;
+}
+/*---------------------navbar---------------------------*/
+.header {
+  padding: 30px;
+  text-align: center;
+  background: #333;
+  color: #D64161FF;
+}
+
+.header h1 {
+  font-size: 40px;
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: #333;
+
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+#navbar a.rights {
+  float: right;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: #D64161FF;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 160px;
+}
+
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #navbar a{
+    float: none;
+    width: 100%;
+  }
+}
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+/*--------------------------------*/
+.afterall{
+  padding:10px;   
+  background-color: #474e5d;
+  overflow: hidden;
+  margin-top: 10px;
+  text-align: center;
+  text-decoration: none;
+}
+.afterall p{
+	color: red;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: -20px;
+}
+.afterall h1{
+	margin-left: 10px;
+	margin-top: 10px;
+
+}
+
+/*----------------- Start of card menu-----------------*/
+
+.card{
+	position: relative;
+	margin: 20px 20px;
+	width: 150px;
+	height: 200px;
+	background: #fff;
+	transform-style: preserve-3d;
+	transform: perspective(1200px);
+	transition: 2s;
+	box-shadow: inset 150px 0 50px rgba(0,0,0,.5);
+}
+.card:hover{
+	z-index: 1200;
+	transform: perspective(1200px) rotate(-10deg);
+	box-shadow: inset 20px 0 50px rgba(0,0,0,.5);
+
+}
+.card .imgbox{
+	position: relative;
+	width: 100%;
+	height: 100%
+	border:1px solid #000;
+	box-sizing: border-box;
+	transform-origin: left;
+	z-index: 1;
+	transition: 2s;
+}
+.card:hover .imgbox{
+	transform:rotateY(-135deg);
+}
+.card .imgbox .img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit:cover;
+}
+.card .details{
+	position: absolute;
+	top: -10px;
+	box-sizing: border-box;
+	padding-inline: 10px;
+}
+
+.affix {
+    top: 0;
+    width: 100%;
+    z-index: 9999 !important;
+}
+.affix + .container-fluid {
+    padding-top: 70px;
+  }
+/*---------------------end of card menu---------*
